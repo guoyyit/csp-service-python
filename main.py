@@ -1,8 +1,4 @@
-from fastapi import FastAPI
+"""Service entrypoint: run with ``uvicorn main:app``."""
+from csp_service.app import create_app
 
-app = FastAPI()
-
-
-@app.get("/")
-def read_root():
-    return {"Hello": "World"}
+app = create_app()
